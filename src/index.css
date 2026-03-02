@@ -1,0 +1,345 @@
+@import "tailwindcss";
+
+@theme {
+
+
+    --color-primary: hsl(var(--primary));
+    --color-primary-light: hsl(var(--primary-light));
+
+    --color-secondary: hsl(var(--secondary));
+    --color-secondary-light: hsl(var(--secondary-light));
+
+
+    --color-border: hsla(var(--border));
+    --color-background: hsla(var(--background));
+    --color-hover: hsla(var(--hover));
+
+    /* --color-foreground: hsl(var(--foreground)); */
+
+    /* Text */
+    --color-text: hsl(var(--text));
+    --color-alt-text: hsla(var(--text-alt));
+    --color-muted: hsla(var(--muted));
+
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+}
+
+@layer base {
+    :root {
+        --primary: 161, 94%, 30%;
+        --primary-light: 158, 64%, 52%;
+
+        --secondary: 31, 53%, 64%;
+        --secondary-light: 34, 61%, 77%;
+
+
+        /* Background - Light */
+        --bg-dark: #f5f5f0;
+        --bg-gradient-1: #e8f5e9;
+        --bg-gradient-2: #f1f8e9;
+        --bg-gradient-3: #fefefe;
+
+
+        /* Glass Colors - Light */
+        --background: 0, 0%, 100%, 0.6;
+        --border: 0, 0%, 0%, 0.1;
+        --hover: 0, 0%, 100%, 0.8;
+
+        /* Text */
+        --text: 0, 0%, 10%;
+        --text-alt: 0, 0%, 10%, 0.702;
+        --muted: 0, 0%, 10%, 0.5;
+
+    }
+
+
+    .dark {
+
+        --primary: 161, 94%, 30%;
+        --primary-light: 158, 64%, 52%;
+
+        --secondary: 31, 53%, 64%;
+        --secondary-light: 34, 61%, 77%;
+
+
+        /* Background - Deep Forest */
+        --bg-dark: #0a0f0d;
+        --bg-gradient-1: #0d1a14;
+        --bg-gradient-2: #132419;
+        --bg-gradient-3: #1a2e23;
+
+
+
+        /* Glass Colors dark */
+        --background: 0, 100%, 100%, 0.051;
+        --border: 0, 0%, 100%, 0.1;
+        --hover: 0, 0%, 100%, 0.08;
+
+        /* Text */
+        --text: 60, 5%, 96%;
+        --text-alt: 60, 5%, 96%, 0.7;
+        --muted: 60, 5%, 96%, 0.4;
+
+    }
+
+    * {
+        @apply border-border m-0 p-0 box-border;
+    }
+
+    html {
+        @apply scroll-smooth
+    }
+
+    body {
+        @apply text-[var(--color-text)] bg-[var(--bg-dark)] min-h-dvh overflow-x-hidden;
+        font-family: 'Outfit', sans-serif;
+        line-height: 1.6;
+    }
+}
+
+@utility container {
+    margin-inline: auto;
+    padding-inline: 1rem;
+
+    @media (width >=640px) {
+        max-width: 640px;
+    }
+
+    @media (width >=768px) {
+        max-width: 768px;
+    }
+
+    @media (width >=1024px) {
+        max-width: 1024px;
+    }
+
+    @media (width >=1280px) {
+        max-width: 1280px;
+    }
+
+    @media (width >=1400px) {
+        max-width: 1400px;
+    }
+}
+
+
+@utility glassy {
+    @apply bg-background backdrop-blur-xl border rounded-lg;
+}
+
+@utility card-header {
+    @apply flex items-center justify-center flex-col md:flex-row md:justify-between mb-6;
+}
+
+@utility card-title {
+    @apply text-[18px] font-semibold;
+}
+
+@utility card-subtitle {
+    @apply text-[13px] text-muted mt-1;
+}
+
+@utility card-btn {
+    @apply px-4 py-2 my-2 glassy rounded-lg text-alt-text text-[13px] transition hover:bg-hover hover:border-primary-light hover:text-text;
+}
+
+@utility item-hover {
+    @apply bg-hover text-text;
+}
+@utility gradiant {
+    @apply bg-gradient-to-l from-[var(--color-primary)] to-[var(--color-secondary)];
+}
+
+
+
+@utility settingsTitle {
+    @apply text-lg font-semibold mb-5 pb-3 border-b
+}
+
+@utility settingsSelect {
+    @apply py-2.5 px-4 bg-primary border rounded-lg text-text text-sm cursor-pointer pr-9 focus:outline-0 focus:border-primary-light shadow-amber-50
+}
+
+
+#root {
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ANIMATED BACKGROUND============================================*/
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: linear-gradient(135deg, var(--bg-gradient-1) 0%, var(--bg-gradient-2) 50%, var(--bg-gradient-3) 100%);
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(ellipse 80% 50% at 20% 40%, rgba(120, 0, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse 60% 40% at 80% 60%, rgba(0, 200, 255, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse 50% 30% at 50% 80%, rgba(255, 0, 200, 0.1) 0%, transparent 50%);
+}
+
+/* Floating Orbs */
+.orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    z-index: -1;
+    animation: float 20s ease-in-out infinite;
+}
+
+.orb-1 {
+    width: 400px;
+    height: 400px;
+    background: var(--color-primary);
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.orb-2 {
+    width: 350px;
+    height: 350px;
+    background: var(--color-secondary);
+    top: 60%;
+    right: 10%;
+    animation-delay: -5s;
+}
+
+.orb-3 {
+    width: 300px;
+    height: 300px;
+    background: var(--color-background);
+    bottom: 10%;
+    left: 30%;
+    animation-delay: -10s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+        transform: translate(30px, -30px) scale(1.05);
+    }
+
+    50% {
+        transform: translate(-20px, 20px) scale(0.95);
+    }
+
+    75% {
+        transform: translate(20px, 10px) scale(1.02);
+    }
+}
+
+
+
+
+
+/* 3D Tilt Effect */
+
+
+.glass-card {
+    background: var(--color-background);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-normal);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+.glass-card:hover {
+    background: var(--color-hover);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 25px 50px -12px hsla(0, 0%, 0%, 0.1),
+        0 0 40px rgba(52, 211, 153, 0.1);
+}
+
+.glass-card-3d {
+    transition: transform 0.4s cubic-bezier(0.03, 0.98, 0.52, 0.99);
+}
+
+.glass-card-3d:hover {
+    transform: rotateX(5deg) rotateY(-5deg) translateZ(10px);
+}
+
+.stat-card {
+    position: relative;
+}
+
+
+
+
+
+
+*::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+}
