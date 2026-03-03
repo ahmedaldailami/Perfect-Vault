@@ -14,18 +14,13 @@ export const Sidebar = () => {
       >
         {/* Header */}
         <div className="p-6 border-b border-gray-800">
-          <h1 className="text-xl font-bold text-white">
-            PerfectDash
-          </h1>
+          <h1 className="text-xl font-bold text-white">PerfectDash</h1>
         </div>
 
         {/* Navigation */}
         <nav className="p-4 space-y-6 overflow-y-auto h-[calc(100%-140px)]">
-          {sidebarSections.map(section => (
-            <SidebarSection
-              key={section.title}
-              section={section}
-            />
+          {sidebarSections.map((section) => (
+            <SidebarSection key={section.title} section={section} />
           ))}
         </nav>
 
@@ -36,12 +31,8 @@ export const Sidebar = () => {
               MP
             </div>
             <div>
-              <p className="text-sm text-white font-medium">
-                Mr.Perfect
-              </p>
-              <p className="text-xs text-gray-400">
-                Administrator
-              </p>
+              <p className="text-sm text-white font-medium">Mr.Perfect</p>
+              <p className="text-xs text-gray-400">Administrator</p>
             </div>
           </div>
         </div>
