@@ -1,0 +1,31 @@
+
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@test.com",
+      "password": "123456",
+      "role": "admin",
+      "state": "active",
+      "joinedDate": "2024-01-10",
+      "lastActivity": "2025-02-20",
+      "subscription": "pro"
+    }
+  ],
+  "wallet": [
+    {
+      "id": 1,
+      "coin": "Bitcoin",
+      "amount": 2.4,
+      "value": 120000
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "type": "deposit",
+      "amount": 5000,
+      "status": "completed"
+    }
+  ]
+}

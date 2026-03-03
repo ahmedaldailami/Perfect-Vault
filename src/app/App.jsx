@@ -1,19 +1,8 @@
-import { Sidebar } from "../shared/components/layout/Sidebar/Sidebar";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./router";
 
 function App() {
-  return (
-    <div className="">
-      {/* <!-- Animated Background --> */}
-      <div className="background"></div>
-      <div className="orb orb-1"></div>
-      <div className="orb orb-2"></div>
-      <div className="orb orb-3"></div>
-
-      <p>jhgdwhkj</p>
-
-      <Sidebar />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
