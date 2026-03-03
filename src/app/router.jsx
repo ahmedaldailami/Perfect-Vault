@@ -4,11 +4,16 @@ import Dashboard from "../features/dashboard/pages/Dashboard";
 import Wallet from "../features/wallet/pages/Wallet";
 import ProtectedRoute from "../shared/routes/ProtectedRoute";
 import DashboardLayout from "../shared/components/layout/DashboardLayout";
+import NotFound from "../features/404/NotFound";
 
 export const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
   {
     element: <ProtectedRoute />,

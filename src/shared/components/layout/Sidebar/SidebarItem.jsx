@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 export const SidebarItem = ({ item }) => {
-  const Icon = item.icon;
+  // const Icon = item.icon;
   
   return (
     <NavLink
@@ -14,7 +14,7 @@ export const SidebarItem = ({ item }) => {
            : "text-gray-400 hover:bg-gray-800 hover:text-white"}`
       }
     >
-      <Icon size={20} />
+      {/* <Icon size={20} /> */}
 
       <span className="flex-1">{item.label}</span>
 
