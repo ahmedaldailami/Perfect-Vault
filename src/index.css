@@ -53,9 +53,8 @@
   }
 
   body {
-    @apply text-primary bg-background leading-[1.6] min-h-dvh overflow-x-hidden;
-    font-family: "Outfit", sans-serif;
- 
+    @apply text-primary text-lg bg-background leading-[1.6] min-h-dvh overflow-x-hidden transition-all duration-300 ease-in-out;
+    font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif; 
   }
 }
 
@@ -120,12 +119,12 @@
   @apply py-2.5 px-4 bg-primary border rounded-lg text-text text-sm cursor-pointer pr-9 focus:outline-0 focus:border-primary-light shadow-amber-50;
 } */
 
-#root {
+/* #root {
   max-width: 100%;
   padding: 0;
   margin: 0 auto;
   box-sizing: border-box;
-}
+} */
 
 /* ANIMATED BACKGROUND============================================*/
 

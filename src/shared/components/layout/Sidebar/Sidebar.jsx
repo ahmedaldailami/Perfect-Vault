@@ -1,5 +1,7 @@
 import { sidebarSections } from "./sidebar.config";
+import { SidebarItem } from "./SidebarItem";
 import { SidebarSection } from "./SidebarSection";
+import { ThemeToggle } from "./ThemeToggle";
 import { useSidebar } from "./useSidebar";
 
 export const Sidebar = () => {
@@ -26,24 +28,24 @@ export const Sidebar = () => {
 
         {/* Footer Profile */}
         <div className="absolute bottom-0 w-full border-t border-gray-800 p-4">
-          <div className="flex items-center gap-3 p-2 rounded-xl hover:bg-gray-800 cursor-pointer transition">
-            <div className="w-10 h-10 bg-green-600 rounded-xl flex items-center justify-center font-bold">
-              MP
-            </div>
-            <div>
-              <p className="text-sm text-white font-medium">Mr.Perfect</p>
-              <p className="text-xs text-gray-400">Administrator</p>
-            </div>
-          </div>
+          <ThemeToggle />
+          <SidebarItem
+            key={"logout"}
+            item={{
+              label: "Logout",
+              path: "/logout",
+              icon: "LogOut",
+            }}
+          />
         </div>
       </aside>
 
       {/* Mobile Toggle */}
       <button
         onClick={toggle}
-        className="fixed bottom-6 right-6 lg:hidden bg-green-600
+        className="fixed bottom-6 right-6 lg:hidden bg-background
         w-14 h-14 rounded-full flex items-center justify-center
-        text-white shadow-lg"
+        text-white shadow-lg z-50"
         aria-label="Toggle Sidebar"
       >
         ☰

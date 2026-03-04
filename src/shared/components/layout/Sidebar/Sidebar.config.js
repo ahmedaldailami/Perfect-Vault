@@ -16,16 +16,21 @@ export const sidebarSections = [
         icon: "LayoutDashboard",
       },
       {
-        label: "Analytics",
-        path: "/analytics",
+        label: "Markets",
+        path: "/Markets",
         icon: "BarChart3",
         badge: "New",
       },
       {
-        label: "Users",
-        path: "/users",
+        label: "Wallet",
+        path: "/Wallet",
         icon: "Users",
       },
+    ],
+  },
+  {
+    title: "Account",
+    items: [
       {
         label: "Settings",
         path: "/settings",
@@ -34,7 +39,7 @@ export const sidebarSections = [
     ],
   },
   {
-    title: "Account",
+    title: "",
     items: [
       {
         label: "Logout",
