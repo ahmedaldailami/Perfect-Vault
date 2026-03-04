@@ -10,7 +10,7 @@ export const Sidebar = () => {
   return (
     <>
       <aside
-        className={`fixed left-0 top-0 h-full bg-background-alt border-r py-8 px-6
+        className={`fixed left-0 top-0 h-full w-64 bg-background-alt border-r py-8 px-6
         transition-all duration-300 z-50
         ${open ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}`}
       >

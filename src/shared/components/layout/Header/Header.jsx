@@ -4,7 +4,7 @@ import UserMenu from "./UserMenu";
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center mb-8">
+    <header className="flex justify-between lg:items-center mb-8 flex-col gap-2 lg:flex-row">
       <div className="header-left">
         <h1 className="text-[28px] font-bold text-primary mb-1">Dashboard</h1>
         <p className="text-sm text-secondary">
@@ -12,11 +12,10 @@ const Header = () => {
         </p>
       </div>
 
-      <div className="flex items-center gap-5">
+      <div className="flex items-center gap-5 flex-wrap">
         <Search />
 
         <NotificationBtn />
-
         <UserMenu />
       </div>
     </header>

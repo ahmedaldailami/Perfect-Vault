@@ -1,6 +1,6 @@
 const Search = () => {
   return (
-    <div className="flex items-center gap-2.5 bg-background-alt py-2.5 px-4 rounded-xl border focus-within:border-myColor">
+    <div className="flex-1 flex items-center gap-2.5 bg-background-alt py-2.5 px-4 rounded-xl border focus-within:border-myColor">
       <svg
         className="text-muted"
         width="18"

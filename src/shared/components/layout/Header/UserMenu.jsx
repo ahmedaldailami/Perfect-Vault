@@ -4,7 +4,7 @@ const UserMenu = () => {
       <div className="size-9 gradiant rounded-[10px] flex items-center justify-center font-semibold text-sm text-[#1c1c1e]">
         AA
       </div>
-      <div className="flex flex-col">
+      <div className="flex-col flex">
         <span className="text-sm font-semibold text-primary">Ahmed Adnan</span>
         <span className="text-xs text-muted">Pro Trader</span>
       </div>
