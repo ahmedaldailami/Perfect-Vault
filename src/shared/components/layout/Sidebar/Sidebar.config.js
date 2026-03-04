@@ -17,13 +17,13 @@ export const sidebarSections = [
       },
       {
         label: "Markets",
-        path: "/Markets",
+        path: "/markets",
         icon: "BarChart3",
         badge: "New",
       },
       {
         label: "Wallet",
-        path: "/Wallet",
+        path: "/wallet",
         icon: "Users",
       },
     ],
@@ -35,16 +35,6 @@ export const sidebarSections = [
         label: "Settings",
         path: "/settings",
         icon: "Settings",
-      },
-    ],
-  },
-  {
-    title: "",
-    items: [
-      {
-        label: "Logout",
-        path: "/logout",
-        icon: "LogOut",
       },
     ],
   },

@@ -10,24 +10,27 @@ export const Sidebar = () => {
   return (
     <>
       <aside
-        className={`fixed left-0 top-0 h-full w-64 bg-gray-900 border-r border-gray-800
-        transition-transform duration-300 z-50
+        className={`fixed left-0 top-0 h-full bg-background-alt border-r py-8 px-6
+        transition-all duration-300 z-50
         ${open ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}`}
       >
         {/* Header */}
-        <div className="p-6 border-b border-gray-800">
-          <h1 className="text-xl font-bold text-white">PerfectDash</h1>
+        <div className="flex items-center gap-[12px] mb-[48px]">
+          <span className="size-[42px] gradiant rounded-[10px] flex items-center justify-center font-bold text-xl text-[#1c1c1e] [box-shadow:0_4px_12px_rgba(184,_115,_51,_0.25)]">
+            PV
+          </span>
+          <h1 className="text-[22px] font-bold text-primary">PerfectVault</h1>
         </div>
 
         {/* Navigation */}
-        <nav className="p-4 space-y-6 overflow-y-auto h-[calc(100%-140px)]">
+        <nav>
           {sidebarSections.map((section) => (
             <SidebarSection key={section.title} section={section} />
           ))}
         </nav>
 
         {/* Footer Profile */}
-        <div className="absolute bottom-0 w-full border-t border-gray-800 p-4">
+        <div className="mt-auto pt-6 border-t">
           <ThemeToggle />
           <SidebarItem
             key={"logout"}

@@ -27,11 +27,11 @@ export const ThemeToggle = () => {
     }
   };
   return (
-    <div className="flex items-center justify-between px-4 py-3">
+    <div className="flex items-center justify-between text-secondary px-4 py-3.5 mb-1.5">
       <div>
         {isDarkMode ? <span>Dark Theme</span> : <span>Light Theme</span>}
       </div>
-        <Switch action={toggleTheme} />
+      <Switch action={toggleTheme} />
     </div>
   );
 };
