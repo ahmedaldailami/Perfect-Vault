@@ -12,7 +12,8 @@
 
   --color-background: hsla(var(--background));
   --color-background-alt: hsla(var(--background-alt));
-  --color-hover: hsla(var(--hover));
+  --color-card: hsla(var(--card));
+  --color-card-alt: hsla(var(--card-alt));
 }
 
 @layer base {
@@ -28,6 +29,9 @@
 
     --background: 240, 11%, 96%;
     --background-alt: 0, 0%, 100%;
+
+    --card: 0, 0%, 100%;
+    --card-alt: 240, 7%, 95%;
   }
 
   .dark {
@@ -42,6 +46,9 @@
 
     --background: 240, 3%, 11%;
     --background-alt: 240, 3%, 14%;
+
+    --card: 240, 2%, 18%;
+    --card-alt: 240, 2%, 21%;
   }
 
   * {
@@ -94,6 +101,9 @@
 }
 @utility glow {
   box-shadow: 0 4px 12px rgba(184, 115, 51, 0.3);
+}
+@utility card-bg {
+  @apply bg-card rounded-[14px] p-7 border [transition:all_0.3s_ease];
 }
 
 /* 
