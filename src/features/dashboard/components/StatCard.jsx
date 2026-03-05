@@ -1,7 +1,7 @@
-const StatCard = ({stat}) => {
+const StatCard = ({ stat }) => {
   return (
-    <div class="card-bg p-5 flex items-start gap-4 hover:border-myColor hover:-translate-y-1 hover:[box-shadow:0_8px_24px_var(--shadow)]">
-      <div class="size-12 text-myColor bg-[rgba(184,_115,_51,_0.15)] rounded-xl flex items-center justify-center flex-shrink-0">
+    <div className="card-bg p-5 flex items-start gap-4 hover:border-myColor hover:-translate-y-1 hover:[box-shadow:0_8px_24px_var(--shadow)]">
+      <div className="size-12 text-myColor bg-[rgba(184,_115,_51,_0.15)] rounded-xl flex items-center justify-center flex-shrink-0">
         <svg
           width="24"
           height="24"
@@ -15,10 +15,12 @@ const StatCard = ({stat}) => {
         </svg>
       </div>
 
-      <div class="flex-1 min-w-0">
-        <div class="text-[13px] text-secondary mb-1">{stat.label}</div>
-        <div class="text-[24px] font-bold text-primary mb-1">{stat.value}</div>
-        <div class="text-[13px] text-muted">{stat.change}</div>
+      <div className="flex-1 min-w-0">
+        <div className="text-[13px] text-secondary mb-1">{stat.label}</div>
+        <div className="text-[24px] font-bold text-primary mb-1">
+          {stat.value}
+        </div>
+        <div className="text-[13px] text-muted">{stat.change}</div>
       </div>
     </div>
   );

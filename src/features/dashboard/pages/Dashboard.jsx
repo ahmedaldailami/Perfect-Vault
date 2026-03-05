@@ -1,6 +1,7 @@
 import CardTabs from "../components/CardTabs";
 import ChartCard from "../components/ChartCard";
 import StatCard from "../components/StatCard";
+import Trading from "../components/Trading";
 
 const Dashboard = () => {
   const stats = [
@@ -40,22 +41,60 @@ const Dashboard = () => {
       ],
     },
   ];
+  const trading = [
+    {
+      tittle: "BTC/USD",
+      price: "43,256.00",
+      change: "+2.34",
+    },
+    {
+      tittle: "ETH/USD",
+      price: "2,284.50",
+      change: "+1.87",
+    },
+  ];
+  const info = [
+    {
+      tittle: "Asset Allocation",
+    },
+    {
+      tittle: "Portfolio Health",
+    },
+    {
+      tittle: "Risk Level",
+    },
+  ];
+
   return (
-    <div className="grid grid-cols-[1fr_280px] gap-[24px] mb-[24px]">
+    <div className="grid xl:grid-cols-[1fr_280px] gap-[24px] mb-[24px]">
       <div className="flex flex-col gap-6">
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {charts.map((item) => (
             <ChartCard
+              key={item.tittle}
               title={item.tittle}
               other={<CardTabs tabs={item.tabs} />}
             />
           ))}
+
+          {trading.map((item) => (
+            <ChartCard
+              key={item.tittle}
+              title={item.tittle}
+              other={<Trading pair={item} />}
+            />
+          ))}
+        </div>
+        <div className="grid grid-cols-3 gap-6">
+          {info.map((item) => (
+            <ChartCard title={item.tittle} key={item.tittle} />
+          ))}
         </div>
       </div>
 
-      <div className="flex flex-col gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-4">
         {stats.map((item) => (
-          <StatCard stat={item} key={item.name} />
+          <StatCard stat={item} key={item.label} />
         ))}
       </div>
     </div>
