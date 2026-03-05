@@ -1,3 +1,4 @@
+import { LogOut } from "lucide-react";
 import { sidebarSections } from "./sidebar.config";
 import { SidebarItem } from "./SidebarItem";
 import { SidebarSection } from "./SidebarSection";
@@ -37,7 +38,7 @@ export const Sidebar = () => {
             item={{
               label: "Logout",
               path: "/logout",
-              icon: "LogOut",
+              icon: LogOut,
             }}
           />
         </div>

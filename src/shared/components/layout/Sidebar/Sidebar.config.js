@@ -1,10 +1,9 @@
-// import {
-//   LayoutDashboard,
-//   BarChart3,
-//   Users,
-//   Settings,
-//   LogOut,
-// } from "lucide-react";
+import {
+  LayoutDashboard,
+  BarChart3,
+  Settings,
+  Wallet2,
+} from "lucide-react";
 
 export const sidebarSections = [
   {
@@ -13,18 +12,18 @@ export const sidebarSections = [
       {
         label: "Dashboard",
         path: "/",
-        icon: "LayoutDashboard",
+        icon: LayoutDashboard,
       },
       {
         label: "Markets",
         path: "/markets",
-        icon: "BarChart3",
+        icon: BarChart3,
         badge: "New",
       },
       {
         label: "Wallet",
         path: "/wallet",
-        icon: "Users",
+        icon: Wallet2,
       },
     ],
   },
@@ -34,7 +33,7 @@ export const sidebarSections = [
       {
         label: "Settings",
         path: "/settings",
-        icon: "Settings",
+        icon: Settings,
       },
     ],
   },

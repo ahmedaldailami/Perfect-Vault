@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Switch from "../../UI/Switch";
+import { Moon, Sun } from "lucide-react";
 
 export const ThemeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -29,7 +30,17 @@ export const ThemeToggle = () => {
   return (
     <div className="flex items-center justify-between text-secondary px-4 py-3.5 mb-1.5">
       <div>
-        {isDarkMode ? <span>Dark Theme</span> : <span>Light Theme</span>}
+        {isDarkMode ? (
+          <div className="flex items-center gap-3.5">
+            {" "}
+            <Moon size={22} /> <span className="text-sm"> Dark Theme</span>
+          </div>
+        ) : (
+          <div className="flex items-center gap-3.5">
+            {" "}
+            <Sun size={22} /> <span className="text-sm"> Light Theme</span>
+          </div>
+        )}
       </div>
       <Switch action={toggleTheme} />
     </div>
