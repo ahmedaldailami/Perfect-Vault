@@ -1,7 +1,13 @@
+// import { PieChart } from "recharts";
+import RevenueChart from "../charts/chart";
+import PieChart from "../charts/PieChart";
+import SalesChart from "../charts/ReChart";
+import VisitsChart from "../charts/RechartLine";
 import CardTabs from "../components/CardTabs";
 import ChartCard from "../components/ChartCard";
 import StatCard from "../components/StatCard";
 import Trading from "../components/Trading";
+import { pieChartData, pieChartOptions } from "../variables/charts";
 
 const Dashboard = () => {
   const stats = [
@@ -74,7 +80,12 @@ const Dashboard = () => {
               key={item.tittle}
               title={item.tittle}
               other={<CardTabs tabs={item.tabs} />}
-            />
+            >
+                {/* <PieChart options={pieChartOptions} series={pieChartData} /> */}
+                {/* <RevenueChart /> */}
+                {/* <SalesChart /> */}
+                <VisitsChart />
+            </ChartCard>
           ))}
 
           {trading.map((item) => (

@@ -9,7 +9,7 @@ const ChartCard = ({ title, other, children }) => {
         {/* {tabs ? <CardTabs tabs={tabs} /> : <p>jhghj</p>} */}
       </div>
 
-      {children}
+      <div className="w-full">{children}</div>
     </div>
   );
 };

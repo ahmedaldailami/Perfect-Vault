@@ -3,20 +3,20 @@ import StatCard from "../components/StatCard";
 const Markets = () => {
   const stats = [
     {
-      label: "Total Balance",
-      value: "$84,254.32",
-      change: "+12.5% this month",
+      label: "Total Market Cap",
+      value: "$2.48T",
+      change: "+2.4%",
     },
 
     {
-      label: "Total Profit",
-      value: "$12,847.00",
-      change: "+8.2% vs last week",
+      label: "24h Volume",
+      value: "$84.2B",
+      change: "+5.8 %",
     },
 
-    { label: "Pending Orders", value: "7", change: "3 buy, 4 sell" },
+    { label: "BTC Dominance", value: "52.4%", change: "-0.3 % " },
 
-    { label: "Active Assets", value: "12", change: "Across 4 wallets" },
+    { label: "Active Cryptos", value: "12,847", change: "+24" },
   ];
 
   return (
