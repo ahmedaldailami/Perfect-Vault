@@ -1,4 +1,5 @@
 // import { PieChart } from "recharts";
+import { ArrowDownUp, Clock3, DollarSign, FileStack } from "lucide-react";
 import RevenueChart from "../charts/chart";
 import PieChart from "../charts/PieChart";
 import SalesChart from "../charts/ReChart";
@@ -15,17 +16,29 @@ const Dashboard = () => {
       label: "Total Balance",
       value: "$84,254.32",
       change: "+12.5% this month",
+      icon: DollarSign,
     },
 
     {
       label: "Total Profit",
       value: "$12,847.00",
       change: "+8.2% vs last week",
+      icon: ArrowDownUp,
     },
 
-    { label: "Pending Orders", value: "7", change: "3 buy, 4 sell" },
+    {
+      label: "Pending Orders",
+      value: "7",
+      change: "3 buy, 4 sell",
+      icon: Clock3,
+    },
 
-    { label: "Active Assets", value: "12", change: "Across 4 wallets" },
+    {
+      label: "Active Assets",
+      value: "12",
+      change: "Across 4 wallets",
+      icon: FileStack,
+    },
   ];
 
   const charts = [
@@ -81,10 +94,10 @@ const Dashboard = () => {
               title={item.tittle}
               other={<CardTabs tabs={item.tabs} />}
             >
-                {/* <PieChart options={pieChartOptions} series={pieChartData} /> */}
-                {/* <RevenueChart /> */}
-                {/* <SalesChart /> */}
-                <VisitsChart />
+              {/* <PieChart options={pieChartOptions} series={pieChartData} /> */}
+              {/* <RevenueChart /> */}
+              {/* <SalesChart /> */}
+              <VisitsChart />
             </ChartCard>
           ))}
 
