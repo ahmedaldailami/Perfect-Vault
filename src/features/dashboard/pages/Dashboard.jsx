@@ -9,6 +9,9 @@ import ChartCard from "../components/ChartCard";
 import StatCard from "../components/StatCard";
 import Trading from "../components/Trading";
 import { pieChartData, pieChartOptions } from "../variables/charts";
+import Transactions from "../components/utils/transactions/Transactions";
+import Movers from "../components/utils/movers/Movers";
+import Watchlist from "../components/utils/watchlist/Watchlist";
 
 const Dashboard = () => {
   const stats = [
@@ -85,43 +88,50 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="grid xl:grid-cols-[1fr_280px] gap-[24px] mb-[24px]">
-      <div className="flex flex-col gap-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {charts.map((item) => (
-            <ChartCard
-              key={item.tittle}
-              title={item.tittle}
-              other={<CardTabs tabs={item.tabs} />}
-            >
-              {/* <PieChart options={pieChartOptions} series={pieChartData} /> */}
-              {/* <RevenueChart /> */}
-              {/* <SalesChart /> */}
-              <VisitsChart />
-            </ChartCard>
-          ))}
+    <>
+      <div className="grid xl:grid-cols-[1fr_280px] gap-[24px] mb-[24px]">
+        <div className="flex flex-col gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {charts.map((item) => (
+              <ChartCard
+                key={item.tittle}
+                title={item.tittle}
+                other={<CardTabs tabs={item.tabs} />}
+              >
+                {/* <PieChart options={pieChartOptions} series={pieChartData} /> */}
+                {/* <RevenueChart /> */}
+                {/* <SalesChart /> */}
+                <VisitsChart />
+              </ChartCard>
+            ))}
 
-          {trading.map((item) => (
-            <ChartCard
-              key={item.tittle}
-              title={item.tittle}
-              other={<Trading pair={item} />}
-            />
-          ))}
+            {trading.map((item) => (
+              <ChartCard
+                key={item.tittle}
+                title={item.tittle}
+                other={<Trading pair={item} />}
+              />
+            ))}
+          </div>
+          <div className="grid grid-cols-3 gap-6">
+            {info.map((item) => (
+              <ChartCard title={item.tittle} key={item.tittle} />
+            ))}
+          </div>
         </div>
-        <div className="grid grid-cols-3 gap-6">
-          {info.map((item) => (
-            <ChartCard title={item.tittle} key={item.tittle} />
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-4">
+          {stats.map((item) => (
+            <StatCard stat={item} key={item.label} />
           ))}
         </div>
       </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-4">
-        {stats.map((item) => (
-          <StatCard stat={item} key={item.label} />
-        ))}
+      <div className="grid grid-cols-3 gap-6">
+        <Transactions />
+        <Movers />
+        <Watchlist />
       </div>
-    </div>
+    </>
   );
 };
 
