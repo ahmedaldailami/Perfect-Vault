@@ -5,7 +5,6 @@ import MoversTab from "./MoversTabs";
 
 const Movers = () => {
   return (
-    <div>
       <ChartCard title="Top Movers" other={<MoversTab />}>
         <div className="flex flex-col">
           {TopMovers.map((item) => {
@@ -13,7 +12,6 @@ const Movers = () => {
           })}
         </div>
       </ChartCard>
-    </div>
   );
 };
 export default Movers;

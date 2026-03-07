@@ -6,7 +6,6 @@ const Transactions = () => {
   // console.log(recentTransactions[0]);
 
   return (
-    <div>
       <ChartCard
         title="Recent Transactions"
         other={
@@ -20,7 +19,6 @@ const Transactions = () => {
         })}
 
       </ChartCard>
-    </div>
   );
 };
 export default Transactions;

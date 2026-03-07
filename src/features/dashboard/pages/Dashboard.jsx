@@ -126,7 +126,7 @@ const Dashboard = () => {
           ))}
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
         <Transactions />
         <Movers />
         <Watchlist />
