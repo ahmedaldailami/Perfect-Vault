@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 
 export const sidebarSections = [
+  
   {
     title: "Main Menu",
     items: [
