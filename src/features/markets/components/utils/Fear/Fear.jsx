@@ -1,21 +1,27 @@
 const Fear = () => {
   return (
-    <div class="card">
-      <div class="card-header">
-        <h3 class="card-title">Fear & Greed Index</h3>
+    <div className="card-bg">
+      <div className="flex justify-between items-center mb-6 w-full">
+        <h2 className="text-xl font-semibold text-primary">
+          Fear & Greed Index
+        </h2>
       </div>
-      <div class="fear-greed">
-        <div class="fear-greed-meter">
-          <div class="fear-greed-indicator" style="left: 68%;"></div>
+
+      <div className="mt-6">
+        <div className="h-3 bg-[linear-gradient(90deg,_#c27878,_#c9a878,_#6b8e6b)] rounded-md relative mx-0 my-4">
+          <div
+            className="absolute -top-1 size-5 bg-primary rounded-full transform -translate-x-1/2 "
+            style={{ left: "68%" }}
+          ></div>
         </div>
-        <div class="fear-greed-labels">
+        <div className="flex justify-between text-xs text-muted">
           <span>Extreme Fear</span>
           <span>Neutral</span>
           <span>Extreme Greed</span>
         </div>
-        <div class="fear-greed-value">
-          <div class="fear-greed-number">68</div>
-          <div class="fear-greed-label">Greed</div>
+        <div className="text-center mt-4">
+          <div className="text-4xl font-bold text-primary">68</div>
+          <div className="text-sm text-myColor font-semibold">Greed</div>
         </div>
       </div>
     </div>
