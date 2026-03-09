@@ -20,6 +20,7 @@ const Markets = () => {
           <Trending />
           <Fear />
         </div>
+        
       </div>
     </div>
   );

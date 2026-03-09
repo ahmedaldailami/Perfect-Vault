@@ -1,0 +1,37 @@
+export const OpportunitiesData = [
+  {
+    name: "Solana",
+    apy: "7.8%",
+    staked: "25 SOL",
+    rewards: "1.95 SOL",
+    icon: "◎",
+    rank: 1,
+    color: { background: "linear-gradient(135deg, #9945ff, #14f195)" },
+  },
+  {
+    name: "Dogecoin",
+    apy: "12.5%",
+    staked: "150 DOG",
+    rewards: "18.75 DOG",
+    icon: "Ð",
+    rank: 2,
+    color: { background: "linear-gradient(135deg, #c3a634, #ba9f33)" },
+  },
+  {
+    name: "Ethereum 2.0",
+    apy: "5.2%",
+    staked: "4.5 ETH",
+    rewards: "0.234 ETH",
+    icon: "Ξ",
+    color: { background: "linear-gradient(135deg, #627eea, #4a5fc1)" },
+  },
+  {
+    name: "Cardano",
+    apy: "4.5%",
+    staked: "5,000 ADA",
+    rewards: "225 ADA",
+    icon: "₳",
+    rank: 5,
+    color: { background: "linear-gradient(135deg, #0033ad, #002276)" },
+  },
+];
