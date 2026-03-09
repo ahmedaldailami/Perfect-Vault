@@ -1,5 +1,6 @@
 import Fear from "../components/utils/Fear/Fear";
 import FilterSection from "../components/utils/filters/FilterSection";
+import Market from "../components/utils/Market/Market";
 import StatCard from "../components/utils/Stats/StatCard";
 import { StatsData } from "../components/utils/Stats/Stats.config";
 import Trending from "../components/utils/Trending/Trending";
@@ -14,7 +15,7 @@ const Markets = () => {
       </div>
       <FilterSection />
       <div className="grid grid-cols-[2fr_1fr] gap-5">
-        <div className="card-bg"></div>
+        <Market />
         <div className="grid gap-5">
           <Trending />
           <Fear />
