@@ -4,7 +4,7 @@ import Opportunity from "./Opportunity";
 const Opportunities = () => {
   return (
     <section className="card-bg mb-8">
-      <div className="card-header">
+      <div>
         <h2 className="text-xl font-semibold text-primary mb-5">
           Staking Opportunities
         </h2>
