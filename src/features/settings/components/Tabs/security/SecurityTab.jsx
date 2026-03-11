@@ -1,8 +1,9 @@
+import { SecurityData } from "./Security.config";
 import SecurityItem from "./SecurityItem";
 
 const SecurityTab = () => {
   return (
-    <div className="settings-content" id="security">
+    <section className="settings-content" id="security">
       <div className="card-bg">
         <div className="flex items-center justify-between mb-6">
           <h3 className="text-[20px] font-semibold text-primary">
@@ -12,32 +13,33 @@ const SecurityTab = () => {
             Manage your account security and authentication methods
           </p>
         </div>
-        <SecurityItem
-          title={"Password"}
-          status="Last changed 30 days ago"
-          enabled
-          btn="Change Password"
-        />
-        <SecurityItem
-          title={"Password"}
-          status="Last changed 30 days ago"
-          btn="Change Password"
-        />
+
+        <div>
+          {SecurityData.map((item) => (
+            <SecurityItem key={item.title} item={item} />
+          ))}
+        </div>
       </div>
 
       <div className="card-bg">
-        <div className="card-header">
-          <h3 className="card-title">Danger Zone</h3>
+        <div className="flex items-center justify-between mb-6">
+          <h3 className="text-[20px] font-semibold text-primary">
+            Danger Zone
+          </h3>
           <p className="card-description">
             Irreversible actions for your account
           </p>
         </div>
-        <div className="btn-group">
-          <button className="btn danger">Delete Account</button>
-          <button className="btn danger">Export All Data</button>
+        <div className="flex gap-4 mt-6">
+          <button className="px-7 py-3.5 rounded-[10px] text-base font-semibold [font-family:inherit] cursor-pointer [transition:all_0.2s_ease] border-2 text-muted bg-transparent hover:bg-card-alt">
+            Delete Account
+          </button>
+          <button className="px-7 py-3.5 rounded-[10px] text-base font-semibold [font-family:inherit] cursor-pointer [transition:all_0.2s_ease] border-2 text-muted bg-transparent hover:bg-card-alt">
+            Export All Data
+          </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default SecurityTab;
