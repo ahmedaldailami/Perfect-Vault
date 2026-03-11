@@ -3,7 +3,7 @@ import InputField from "../InputField";
 
 const ProfileTab = () => {
   return (
-    <div className="card-bg">
+    <section className="card-bg">
       <div className="flex items-center gap-6 mb-8">
         <div className="size-25 gradiant rounded-[20px] flex items-center justify-center text-4xl font-bold text-[#1c1c1e] relative">
           AA
@@ -51,7 +51,7 @@ const ProfileTab = () => {
         <button className="px-7 py-3.5 rounded-[10px] text-base font-semibold [font-family:inherit] cursor-pointer [transition:all_0.2s_ease] border text-primary bg-transparent hover:bg-card-alt">
           Cancel</button>
       </div>
-    </div>
+    </section>
   );
 };
 export default ProfileTab;
