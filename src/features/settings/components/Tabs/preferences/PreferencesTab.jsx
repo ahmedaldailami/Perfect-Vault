@@ -4,9 +4,9 @@ import { PreferencesData } from "./Preferences.config";
 
 const PreferencesTab = () => {
   return (
-    <section className="settings-content" id="security">
+    <section id="preferences">
       <div className="card-bg">
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex flex-col md:flex-row items-center justify-between mb-6">
           <h3 className="text-[20px] font-semibold text-primary">
             Display Preferences
           </h3>

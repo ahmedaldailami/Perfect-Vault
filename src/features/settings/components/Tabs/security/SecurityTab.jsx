@@ -5,7 +5,7 @@ const SecurityTab = () => {
   return (
     <section className="settings-content" id="security">
       <div className="card-bg">
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex flex-col md:flex-row items-center justify-between mb-6">
           <h3 className="text-[20px] font-semibold text-primary">
             Security Settings
           </h3>
@@ -22,7 +22,7 @@ const SecurityTab = () => {
       </div>
 
       <div className="card-bg">
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex flex-col md:flex-row text-center items-center justify-between mb-6">
           <h3 className="text-[20px] font-semibold text-primary">
             Danger Zone
           </h3>

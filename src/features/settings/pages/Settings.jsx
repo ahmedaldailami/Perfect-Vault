@@ -5,7 +5,11 @@ const Settings = () => {
   return (
     <div>
       <TabsSection />
-      <Outlet />
+
+      {/*        Tabs        */}
+      <div>
+        <Outlet />
+      </div>
     </div>
   );
 };
