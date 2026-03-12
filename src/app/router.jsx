@@ -8,10 +8,10 @@ import NotFound from "../features/404/NotFound";
 import Markets from "../features/markets/pages/Markets";
 import Settings from "../features/settings/pages/Settings";
 import ProfileTab from "../features/settings/components/Tabs/ProfileTab";
-import NotificationsTab from "../features/settings/components/Tabs/NotificationsTab";
-import PreferencesTab from "../features/settings/components/Tabs/PreferencesTab";
 import ConnectedTab from "../features/settings/components/Tabs/ConnectedTab";
 import SecurityTab from "../features/settings/components/Tabs/security/SecurityTab";
+import NotificationTab from "../features/settings/components/Tabs/notification/NotificationTab";
+import PreferencesTab from "../features/settings/components/Tabs/preferences/PreferencesTab";
 
 export const router = createBrowserRouter([
   {
@@ -38,7 +38,7 @@ export const router = createBrowserRouter([
               { index: true, element: <ProfileTab /> },
               { path: "profile", element: <ProfileTab /> },
               { path: "security", element: <SecurityTab /> },
-              { path: "notifications", element: <NotificationsTab /> },
+              { path: "notifications", element: <NotificationTab /> },
               { path: "preferences", element: <PreferencesTab /> },
               { path: "connected", element: <ConnectedTab /> },
             ],
