@@ -8,10 +8,10 @@ import NotFound from "../features/404/NotFound";
 import Markets from "../features/markets/pages/Markets";
 import Settings from "../features/settings/pages/Settings";
 import ProfileTab from "../features/settings/components/Tabs/ProfileTab";
-import ConnectedTab from "../features/settings/components/Tabs/ConnectedTab";
 import SecurityTab from "../features/settings/components/Tabs/security/SecurityTab";
 import NotificationTab from "../features/settings/components/Tabs/notification/NotificationTab";
 import PreferencesTab from "../features/settings/components/Tabs/preferences/PreferencesTab";
+import ConnectedTab from "../features/settings/components/Tabs/connected/ConnectedTab";
 
 export const router = createBrowserRouter([
   {

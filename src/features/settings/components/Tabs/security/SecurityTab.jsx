@@ -1,3 +1,4 @@
+import InputField from "../../InputField";
 import { SecurityData } from "./Security.config";
 import SecurityItem from "./SecurityItem";
 
@@ -26,7 +27,7 @@ const SecurityTab = () => {
           <h3 className="text-[20px] font-semibold text-primary">
             Danger Zone
           </h3>
-          <p className="card-description">
+          <p className="text-sm text-secondary">
             Irreversible actions for your account
           </p>
         </div>
