@@ -1,5 +1,4 @@
 import { createBrowserRouter, Route } from "react-router-dom";
-import Login from "../features/auth/pages/Login";
 import Dashboard from "../features/dashboard/pages/Dashboard";
 import Wallet from "../features/wallet/pages/Wallet";
 import ProtectedRoute from "../shared/routes/ProtectedRoute";
@@ -12,16 +11,12 @@ import SecurityTab from "../features/settings/components/Tabs/security/SecurityT
 import NotificationTab from "../features/settings/components/Tabs/notification/NotificationTab";
 import PreferencesTab from "../features/settings/components/Tabs/preferences/PreferencesTab";
 import ConnectedTab from "../features/settings/components/Tabs/connected/ConnectedTab";
-import Logout from "../features/auth/pages/Logout.jsx";
+import Login from "../features/auth/pages/Login.jsx";
 
 export const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
-  },
-  {
-    path: "/logout",
-    element: <Logout />,
   },
   {
     path: "*",

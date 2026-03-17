@@ -37,7 +37,7 @@ export const Sidebar = () => {
             key={"logout"}
             item={{
               label: "Logout",
-              path: "/logout",
+              path: "/login",
               icon: LogOut,
             }}
           />
