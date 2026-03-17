@@ -6,7 +6,7 @@ const ConnectedTab = () => {
   return (
     <section className="settings-content" id="security">
       <div className="card-bg">
-        <div className="flex flex-col md:flex-row items-center justify-between mb-6">
+        <div className="flex flex-col md:flex-row items-center justify-between mb-6 text-center">
           <h3 className="text-[20px] font-semibold text-primary">
             Connected Exchanges
           </h3>
@@ -19,7 +19,7 @@ const ConnectedTab = () => {
           {ConnectedData.map((item) => (
             <ConnectedItem key={item.title} item={item} />
           ))}
-          <button className="px-7 py-3.5 rounded-[10px] text-base font-semibold [font-family:inherit] cursor-pointer [transition:all_0.2s_ease] border text-[#1c1c1e] gradiant hover:gradiant-hover">
+          <button className="px-7 py-3.5 w-full sm:w-fit rounded-[10px] text-base font-semibold [font-family:inherit] cursor-pointer [transition:all_0.2s_ease] border text-[#1c1c1e] gradiant hover:gradiant-hover">
             + Add Exchange
           </button>
         </div>
@@ -41,7 +41,7 @@ const ConnectedTab = () => {
             placeholder="Tell us about yourself..."
           />
         </div>
-        <div className="flex gap-4 mt-6">
+        <div className="flex flex-col sm:flex-row gap-4 mt-6">
           <button className="px-7 py-3.5 rounded-[10px] text-base font-semibold [font-family:inherit] cursor-pointer [transition:all_0.2s_ease] border-2 text-primary bg-transparent hover:bg-card-alt">
             Regenerate Key
           </button>

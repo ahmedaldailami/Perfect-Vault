@@ -25,6 +25,15 @@ const PreferencesTab = () => {
             <SwitchRow key={item.title} item={item} />
           ))}
         </div>
+
+        <div className="flex flex-col sm:flex-row gap-4 mt-6">
+          <button className="px-7 py-3.5 rounded-[10px] text-base font-semibold [font-family:inherit] cursor-pointer [transition:all_0.2s_ease] border text-[#1c1c1e] gradiant hover:gradiant-hover">
+            Save Preferences
+          </button>
+          <button className="px-7 py-3.5 rounded-[10px] text-base font-semibold [font-family:inherit] cursor-pointer [transition:all_0.2s_ease] border text-primary bg-transparent hover:bg-card-alt">
+            Reset to Default
+          </button>
+        </div>
       </div>
     </section>
   );
