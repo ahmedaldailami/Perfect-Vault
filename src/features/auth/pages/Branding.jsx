@@ -5,9 +5,9 @@ const Branding = () => {
     <section className="flex-1 gradiant flex flex-col justify-center items-center p-15 relative overflow-hidden">
       <div className="relative z-1 text-center text-[#1c1c1e]">
         <div className="size-20 bg-[rgba(28,_28,_30,_0.2)] rounded-[20px] flex items-center justify-center text-[32px] font-bold mt-0 mx-auto mb-6 backdrop-filter backdrop-blur-">
-          CV
+          PV
         </div>
-        <h1 className="text-[42px] font-bold mb-4">CryptoVault</h1>
+        <h1 className="text-[42px] font-bold mb-4">PerfectVault</h1>
         <p className="text-lg opacity-80 max-w-[400px] mt-0 mx-auto mb-12">
           Your secure gateway to the world of cryptocurrency trading and
           portfolio management

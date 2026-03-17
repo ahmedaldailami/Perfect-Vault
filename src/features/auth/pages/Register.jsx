@@ -26,7 +26,7 @@ const Register = () => {
 
       <div className="flex-1 flex flex-col justify-center items-center p-15 relative">
         <button
-          className="absolute top-[32px] right-[32px] w-[46px] h-[46px] bg-[var(--bg-card)] border-[1px] border-solid border-[var(--border)] rounded-[10px] flex items-center justify-center cursor-pointer [transition:all_0.2s_ease]"
+          className="absolute top-8 right-8 size-[46px] bg-card border rounded-[10px] flex items-center justify-center cursor-pointer [transition:all_0.2s_ease]"
           id="themeToggle"
         >
           <Shield />
@@ -45,8 +45,8 @@ const Register = () => {
           {/* <!-- Tab Switcher --> */}
           <Switcher />
 
-          {/* <!-- Login Form --> */}
-          <form className="auth-form active" id="registerForm">
+          {/* <!-- register Form --> */}
+          <form id="registerForm">
             <InputField
               label="Full Name"
               placeholder="Enter your full name"
@@ -120,7 +120,6 @@ const Register = () => {
               </NavLink>
             </p>
           </form>
-          
         </div>
       </div>
     </div>
