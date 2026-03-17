@@ -23,7 +23,7 @@ const Actions = () => {
   ];
 
   return (
-    <section className="flex gap-4 mb-8">
+    <section className="flex gap-4 mb-8 overflow-x-auto pb-3">
       {actions.map((item) => (
         <button
           key={item.action}

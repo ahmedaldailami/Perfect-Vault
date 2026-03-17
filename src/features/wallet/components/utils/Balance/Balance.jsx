@@ -28,9 +28,9 @@ const Balance = () => {
 
   return (
     <section>
-      <div className="grid grid-cols-3 gap-6 mb-8">
+      <div className="grid md:grid-cols-3 gap-6 mb-8">
         {Data.map((item) => {
-          return <BalanceCard key={item.title} item={item} />;
+          return <BalanceCard key={item.label} item={item} />;
         })}
       </div>
     </section>

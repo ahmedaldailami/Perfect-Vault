@@ -12,7 +12,7 @@ const TransactionHistory = () => {
 
       <div className="flex flex-col">
         {TransactionHistoryData.map((item) => {
-          return <TransactionHistoryItem key={item.name} item={item} />;
+          return <TransactionHistoryItem key={item.type} item={item} />;
         })}
       </div>
     </div>

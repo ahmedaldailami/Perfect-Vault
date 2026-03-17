@@ -13,7 +13,7 @@ const AddressesItem = ({ item }) => {
         <div className="text-base font-semibold text-primary mb-1">
           {item.name}
         </div>
-        <div className="text-[13px] text-muted font-mono">{item.address}</div>
+        <div className="text-[13px] text-muted text-wrap font-mono">{item.address}</div>
       </div>
       <div className="text-right">
         <div className="text-base font-semibold text-primary mb-1">

@@ -23,7 +23,7 @@ const WatchlistItem = ({ item }) => {
           {item.change}
         </span>
       </div>
-      <svg class="w-[60px] h-6" viewBox="0 0 50 20">
+      <svg className="w-[60px] h-6" viewBox="0 0 50 20">
         <polyline
           points="0,15 8,12 16,14 24,8 32,10 40,5 50,7"
           fill="none"

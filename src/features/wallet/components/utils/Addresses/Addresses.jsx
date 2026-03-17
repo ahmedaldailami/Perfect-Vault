@@ -4,7 +4,7 @@ import DepositQR from "./DepositQR";
 
 const Addresses = () => {
   return (
-    <section className="grid grid-cols-[2fr_1fr] gap-5 mb-8">
+    <section className="grid xl:grid-cols-[2fr_1fr] gap-5 mb-8">
       {/*        Your Wallets card       */}
       <div className="card-bg">
         <div>
@@ -12,12 +12,12 @@ const Addresses = () => {
             Your Wallets
           </h2>
         </div>
-        <div className="flex flex-col gap-4">
-          {WalletList.map((item) => (
-            <AddressesItem item={item} key={item.name} />
-          ))}
+          <div className="flex flex-col gap-4">
+            {WalletList.map((item) => (
+              <AddressesItem item={item} key={item.name} />
+            ))}
+          </div>
         </div>
-      </div>
 
       {/*        Deposit QR card         */}
       <DepositQR />

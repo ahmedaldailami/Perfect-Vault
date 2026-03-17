@@ -10,7 +10,7 @@ const Opportunities = () => {
         </h2>
       </div>
 
-      <div class="grid grid-cols-2 gap-4">
+      <div className="grid md:grid-cols-2 gap-4">
         {OpportunitiesData.map((item) => {
           return <Opportunity key={item.name} item={item} />;
         })}

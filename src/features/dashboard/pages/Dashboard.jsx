@@ -8,7 +8,6 @@ import CardTabs from "../components/CardTabs";
 import ChartCard from "../components/ChartCard";
 import StatCard from "../components/StatCard";
 import Trading from "../components/Trading";
-import { pieChartData, pieChartOptions } from "../variables/charts";
 import Transactions from "../components/utils/transactions/Transactions";
 import Movers from "../components/utils/movers/Movers";
 import Watchlist from "../components/utils/watchlist/Watchlist";
