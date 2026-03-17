@@ -1,7 +1,7 @@
 // import { useAuthStore } from "../auth.store";
 // import { useNavigate } from "react-router-dom";
 
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useAuthStore } from "../auth.store";
 import Branding from "./Branding";
 import InputField from "./components/InputField";
@@ -90,14 +90,14 @@ const Login = () => {
             <SocialBtns />
 
             <p className="text-center text-sm text-secondary">
-              Don't have an account?
-              <a
-                href="#"
-                id="switchToRegister"
+              Don't have an account?{" "}
+              <NavLink
+                to="/register"
+                end="/register"
                 className="text-myColor hover:text-myColor no-underline font-semibold"
               >
                 Sign up for free
-              </a>
+              </NavLink>
             </p>
           </form>
 
@@ -119,7 +119,6 @@ const Login = () => {
             </button>
           </div> */}
         </div>
-
       </div>
     </div>
   );
