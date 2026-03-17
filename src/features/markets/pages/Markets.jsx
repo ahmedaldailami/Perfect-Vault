@@ -8,13 +8,13 @@ import Trending from "../components/utils/Trending/Trending";
 const Markets = () => {
   return (
     <div className="">
-      <div className="grid grid-cols-[repeat(4,_1fr)] gap-5 mb-8">
+      <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-5 mb-8">
         {StatsData.map((item) => (
           <StatCard stat={item} key={item.label} />
         ))}
       </div>
       <FilterSection />
-      <div className="grid grid-cols-[2fr_1fr] gap-5">
+      <div className="grid xl:grid-cols-[2fr_1fr] gap-5">
         <Market />
         <div className="grid gap-5">
           <Trending />

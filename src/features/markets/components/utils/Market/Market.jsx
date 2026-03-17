@@ -3,7 +3,7 @@ import MarketItem from "./MarketItem";
 
 const Market = () => {
   return (
-    <div className="card-bg">
+    <div className="card-bg overflow-x-auto">
       <table className="w-full border-collapse">
         <thead>
           <tr className=" *:px-4 *:py-3 border-b text-xs font-semibold text-muted uppercase tracking-[0.5px] ">
