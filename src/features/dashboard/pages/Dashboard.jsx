@@ -11,6 +11,8 @@ import Trading from "../components/Trading";
 import Transactions from "../components/utils/transactions/Transactions";
 import Movers from "../components/utils/movers/Movers";
 import Watchlist from "../components/utils/watchlist/Watchlist";
+import PortfolioChart from "../charts/Ch";
+import AssetChart from "../charts/AssetChart";
 
 const Dashboard = () => {
   const stats = [
@@ -91,6 +93,8 @@ const Dashboard = () => {
       <div className="grid xl:grid-cols-[1fr_280px] gap-[24px] mb-[24px]">
         <div className="flex flex-col gap-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <PortfolioChart />
+            <AssetChart />
             {charts.map((item) => (
               <ChartCard
                 key={item.tittle}

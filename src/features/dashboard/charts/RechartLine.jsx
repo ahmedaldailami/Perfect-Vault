@@ -5,6 +5,7 @@ import {
   YAxis,
   Tooltip,
   ResponsiveContainer,
+  CartesianGrid,
 } from "recharts";
 
 // const data = [
@@ -30,22 +31,19 @@ export default function VisitsChart() {
       <LineChart data={data}>
         <XAxis
           dataKey="day"
-          tickSize={0}
+          tick={{ fontSize: 12 }}
           axisLine={false}
+          tickLine={false}
           stroke="var(--color-muted)"
         />
         {/* <YAxis /> */}
-        <Tooltip />
         <Line
-          // type="monotone"
           dataKey="viws"
-          //   label={{ fill: "red", fontSize: 10 }}
           stroke="var(--color-myColor-light)"
           fill="var(--color-myColor)"
-          //   label={true}
-          //   dot={false}
-          //   connectNulls=[true]
         />
+        <CartesianGrid vertical={false} />
+        <Tooltip contentStyle={{backgroundColor: "#111", border: "none", borderRadius: "10px" }} />
       </LineChart>
     </ResponsiveContainer>
   );
