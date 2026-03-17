@@ -2,7 +2,7 @@ import { HeartPulse, Shield, Wallet2 } from "lucide-react";
 
 const Branding = () => {
   return (
-    <div className="flex-1 gradiant flex flex-col justify-center items-center p-15 relative overflow-hidden">
+    <section className="flex-1 gradiant flex flex-col justify-center items-center p-15 relative overflow-hidden">
       <div className="relative z-1 text-center text-[#1c1c1e]">
         <div className="size-20 bg-[rgba(28,_28,_30,_0.2)] rounded-[20px] flex items-center justify-center text-[32px] font-bold mt-0 mx-auto mb-6 backdrop-filter backdrop-blur-">
           CV
@@ -34,7 +34,7 @@ const Branding = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Branding;
