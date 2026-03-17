@@ -12,11 +12,16 @@ import NotificationTab from "../features/settings/components/Tabs/notification/N
 import PreferencesTab from "../features/settings/components/Tabs/preferences/PreferencesTab";
 import ConnectedTab from "../features/settings/components/Tabs/connected/ConnectedTab";
 import Login from "../features/auth/pages/Login.jsx";
+import Register from "../features/auth/pages/Register.jsx";
 
 export const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
   },
   {
     path: "*",
