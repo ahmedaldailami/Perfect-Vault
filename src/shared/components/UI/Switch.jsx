@@ -1,47 +1,14 @@
 const Switch = (props) => {
-  const { extra, color, action, ...rest } = props;
+  const { extra, action, theme, ...rest } = props;
   return (
     <input
       type="checkbox"
+      checked={theme}
       onClick={action}
-      className={`relative h-6 w-12 appearance-none rounded-[20px] bg-primary/30 outline-none transition duration-[0.5s] 
-      before:absolute before:top-[50%] before:h-5 before:w-5 before:translate-x-[2px] before:translate-y-[-50%] before:rounded-[20px]
-      before:bg-white before:shadow-[0_2px_5px_rgba(0,_0,_0,_.2)] before:transition before:content-[""]
-      checked:before:translate-x-[22px] hover:cursor-pointer
-     ${color === "primary"
-          ? "checked:bg-primary"
-          : color === "secondary"
-            ? "checked:bg-secondary"
-          : color === "red"
-            ? "checked:bg-red-500"
-            : color === "blue"
-              ? "checked:bg-blue-500 "
-              : color === "green"
-                ? "checked:bg-green-500 "
-                : color === "yellow"
-                  ? "checked:bg-yellow-500 "
-                  : color === "orange"
-                    ? "checked:bg-orange-500 "
-                    : color === "teal"
-                      ? "checked:bg-teal-500 "
-                      : color === "navy"
-                        ? "checked:bg-navy-500 "
-                        : color === "lime"
-                          ? "checked:bg-lime-500 "
-                          : color === "cyan"
-                            ? "checked:bg-cyan-500 "
-                            : color === "pink"
-                              ? "checked:bg-pink-500 "
-                              : color === "purple"
-                                ? "checked:bg-purple-500 "
-                                : color === "amber"
-                                  ? "checked:bg-amber-500 "
-                                  : color === "indigo"
-                                    ? "checked:bg-indigo-500 "
-                                    : color === "gray"
-                                      ? "checked:bg-gray-500 "
-                                      : "checked:bg-brand-500 "
-        } ${extra}`}
+      className={`relative h-7 w-13 appearance-none rounded-2xl bg-primary/30 outline-none cursor-pointer transition duration-[0.5s] 
+      before:absolute before:top-[50%] before:h-[22px] before:w-[24px] before:translate-x-[2px] before:translate-y-[-50%] before:rounded-full
+      before:bg-white checked:before:bg-black before:shadow-[0_2px_5px_rgba(0,_0,_0,_.2)] before:transition before:content-[""]
+      checked:before:translate-x-[24px] hover:cursor-pointer checked:gradiant ${extra}`}
       name="weekly"
       {...rest}
     />

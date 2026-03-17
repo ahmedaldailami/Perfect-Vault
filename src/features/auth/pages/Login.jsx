@@ -9,6 +9,7 @@ import { Shield } from "lucide-react";
 import Switcher from "./Switcher";
 import Divider from "./components/Divider";
 import SocialBtns from "./components/SocialBtns";
+import { ThemeToggle } from "../../../shared/components/layout/Sidebar/ThemeToggle";
 
 const Login = () => {
   const login = useAuthStore((s) => s.login);
@@ -25,12 +26,7 @@ const Login = () => {
       <Branding />
 
       <div className="flex-1 flex flex-col justify-center items-center p-15 relative">
-        <button
-          className="absolute top-[32px] right-[32px] w-[46px] h-[46px] bg-[var(--bg-card)] border-[1px] border-solid border-[var(--border)] rounded-[10px] flex items-center justify-center cursor-pointer [transition:all_0.2s_ease]"
-          id="themeToggle"
-        >
-          <Shield />
-        </button>
+        <ThemeToggle />
 
         <div className="w-full max-w-[420px]">
           <div className="text-center mb-10">

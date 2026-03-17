@@ -32,7 +32,7 @@ export const Sidebar = () => {
 
         {/* Footer Profile */}
         <div className="mt-auto pt-6 border-t">
-          <ThemeToggle />
+          <ThemeToggle showAll />
           <SidebarItem
             key={"logout"}
             item={{
