@@ -1,9 +1,9 @@
 import { LogOut } from "lucide-react";
-import { sidebarSections } from "./sidebar.config";
 import { SidebarItem } from "./SidebarItem";
 import { SidebarSection } from "./SidebarSection";
 import { ThemeToggle } from "./ThemeToggle";
 import { useSidebar } from "./useSidebar";
+import { sidebarSections } from "./Sidebar.config";
 
 export const Sidebar = () => {
   const { open, toggle } = useSidebar();
