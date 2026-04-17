@@ -3,7 +3,7 @@ import { SidebarItem } from "./SidebarItem";
 import { SidebarSection } from "./SidebarSection";
 import { ThemeToggle } from "./ThemeToggle";
 import { useSidebar } from "./useSidebar";
-import { sidebarSections } from "./Sidebar.config";
+import { SidebarSections } from "./Sidebar.config";
 
 export const Sidebar = () => {
   const { open, toggle } = useSidebar();
@@ -25,7 +25,7 @@ export const Sidebar = () => {
 
         {/* Navigation */}
         <nav>
-          {sidebarSections.map((section) => (
+          {SidebarSections.map((section) => (
             <SidebarSection key={section.title} section={section} />
           ))}
         </nav>

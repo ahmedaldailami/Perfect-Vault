@@ -5,7 +5,7 @@ import {
   Wallet2,
 } from "lucide-react";
 
-export const sidebarSections = [
+export const SidebarSections = [
   
   {
     title: "Main Menu",
