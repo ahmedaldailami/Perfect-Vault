@@ -3,7 +3,7 @@ import { SidebarItem } from "./SidebarItem";
 import { SidebarSection } from "./SidebarSection";
 import { ThemeToggle } from "./ThemeToggle";
 import { useSidebar } from "./useSidebar";
-import { SidebarSections } from "./Sidebar.config.js";
+import { SidebarSections } from "./Sidebar.config";
 
 export const Sidebar = () => {
   const { open, toggle } = useSidebar();
