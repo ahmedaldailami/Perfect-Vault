@@ -3,6 +3,7 @@ const StatCard = ({ stat }) => {
   return (
     <div className="card-bg p-5 flex items-start gap-4 hover:border-myColor hover:-translate-y-1 hover:[box-shadow:0_8px_24px_var(--shadow)]">
       <div className="size-12 text-myColor bg-[rgba(184,_115,_51,_0.15)] rounded-xl flex items-center justify-center flex-shrink-0">
+        <Icon />
       </div>
 
       <div className="flex-1 min-w-0">

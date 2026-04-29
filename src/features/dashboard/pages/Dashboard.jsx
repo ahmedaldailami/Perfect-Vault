@@ -1,5 +1,5 @@
 // import { PieChart } from "recharts";
-import { ArrowDownUp, Clock3, DollarSign, FileStack } from "lucide-react";
+import { ArrowDownUp, Clock3, DollarSignIcon, FileStack } from "lucide-react";
 import RevenueChart from "../charts/chart";
 import PieChart from "../charts/PieChart";
 import SalesChart from "../charts/ReChart";
@@ -20,7 +20,7 @@ const Dashboard = () => {
       label: "Total Balance",
       value: "$84,254.32",
       change: "+12.5% this month",
-      icon: DollarSign,
+      icon: DollarSignIcon,
     },
 
     {
@@ -123,7 +123,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-4">
+        <div className="grid auto-rows-min grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-4">
           {stats.map((item) => (
             <StatCard stat={item} key={item.label} />
           ))}
